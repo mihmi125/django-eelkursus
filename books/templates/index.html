@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page_title }}</title>
+</head>
+<body>
+    <h1>{{ page_title }}</h1>
+    <nav>
+        <a href="/">Kõik raamatud</a> |
+        <a href="/available/">Saadaval raamatud</a> |
+        <a href="/about/">Rakendusest</a>
+    </nav>
+    <ul>
+      {% for book in books %}
+      <li>
+        <strong>{{ book.title }}</strong> - {{ book.author }}
+        ({% if book.is_available %}Saadaval{% else %}Mitte saadaval{% endif %})
+      </li>
+      {% endfor %}
+    </ul>
+    <p>Tere tulemast raamatukogu avalehele!</p>
+</body>
+</html>

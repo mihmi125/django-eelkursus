@@ -1,0 +1,16 @@
+# Virtuaalkeskkond
+.venv/
+venv/
+
+# Andmebaas
+db.sqlite3
+
+# Pythoni vahemälu
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Redaktorite ja OS-i failid
+.vscode/
+.idea/
+.DS_Store
